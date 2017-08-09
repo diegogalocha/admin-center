@@ -36,5 +36,26 @@
     margin-left: 200px
     padding: 50px
     .row
+        display: flex
+        align-items: center
+        margin: 0 -15px 15px
+        font-size: 15px
         .page-header
             margin: 0 0 20px
+        .show-values, .search-filter, .pagination-numbers
+            display: flex
+        .show-values
+            justify-content: flex-start
+            select
+                margin-right: 3px
+        .search-filter, .pagination-numbers
+            justify-content: flex-end
+        table
+            tbody
+                td
+                    .edit-link
+                        padding-right: 5px
+
+.pagination
+    display: flex
+    flex-direction: row
