@@ -10,7 +10,7 @@
                         .panel-body
                             .dataTables_wrapper.form-inline.dt-bootstrap.no-footer
                                 .row
-                                    .col-sm-6.show-values
+                                    .col-sm-8.show-values
                                         .dataTables_length
                                             label(for="number-entries") Mostrar
                                             select#number-entries.form-control.input-sm()
@@ -19,10 +19,12 @@
                                                 option(value="50") 50
                                                 option(value="100") 100
                                             | entradas
-                                    .col-sm-6.search-filter
+                                    .col-sm-2.search-filter
                                         .dataTables_filter
                                             label(for="search") Buscar:
                                             input#search.form-control.input-sm(type="search")
+                                    .col-sm-2.add-item
+                                        a.btn.btn-primary(href="./course.html") Añadir curso
                                 .row
                                     .col-sm-12
                                         table.table.table-striped.table-bordered.table-hover.dataTable.no-footer.dtr-inline
