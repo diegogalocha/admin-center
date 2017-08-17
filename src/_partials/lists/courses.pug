@@ -1,71 +1,81 @@
 .form-wrapper
-    .row
-        .col-lg-12
-            h1.page-header Courses
-    .row
-        .col-lg-12
-            .panel.panel-default
-                .panel-body
-                    .dataTables_wrapper.form-inline.dt-bootstrap.no-footer
-                        .row
-                            .col-sm-6.show-values
-                                .dataTables_length
-                                    label Show
-                                    select.form-control.input-sm
-                                        option(value="10") 10
-                                        option(value="25") 25
-                                        option(value="50") 50
-                                        option(value="100") 100
-                                    | entries
-                            .col-sm-6.search-filter
-                                .dataTables_filter
-                                    label Search:
-                                    input.form-control.input-sm(type="search")
-                        .row
-                            .col-sm-12
-                                table.table.table-striped.table-bordered.table-hover.dataTable.no-footer.dtr-inline
-                                    thead
-                                        tr(role="row")
-                                            th.sorting_asc Title
-                                            th.sorting Slug
-                                            th.sorting Subtitle
-                                            th.sorting Targets
-                                            th.sorting Price
-                                            th
-                                    tbody
-                                        tr.odd
-                                            td Máster en Visualización interactiva de arquitectura con Unreal Engine
-                                            td master-en-visualizacion-interactiva-de-arquitectura-con-unreal-engine
-                                            td Visualización 3D en tiempo real, realidad virtual, interacción con espacios 3D, infoarquitectura
-                                            td En el mundo de la visualización de arquitectura que siempre tratamos de lograr un resultado cercano a la realidad para ofrecer a nuestros clientes la sensación de ver el proyecto terminado.
-                                            td 1995€
-                                            td
-                                                a.edit-link(href="./course.html") E
-                                                a.remove-link R
-                                        tr.even
-                                            td Curso de Diseño de interfaz en proyectos Web, Apps y Smart TV
-                                            td curso-de-diseno-de-interfaz-en-proyectos-web-apps-y-smart-tv
-                                            td Diseño interactivo, diseño visual y funcional, diseño centrado en el usuario, responsive, usabilidad
-                                            td En el Curso de Diseño de interfaz para proyectos Web, Apps y Smart TV aprenderás cómo diseñar el sistema visual y funcional de interacción entre sitios web, aplicaciones para smartphones, tablets y smart TV y sus usuarios en base a las necesidades y objetivos específicos de cada proyecto.
-                                            td 990€
-                                            td
-                                                a.edit-link(href="./course.html") E
-                                                a.remove-link R
-                        .row
-                            .col-sm-6.show-values
-                                .dataTables_info Showing 1 to 10 of 15 entries
-                            .col-sm-6.pagination-numbers
-                                .dataTables_paginate.paging_simple_numbers
-                                    ul.pagination
-                                        li.paginate_button.previous.disabled
-                                            a Previous
-                                        li.paginate_button.disabled
-                                            a 1
-                                        li.paginate_button.disabled
-                                            a 2
-                                        li.paginate_button.disabled
-                                            a 3
-                                        li.paginate_button.disabled
-                                            a 4
-                                        li.paginate_button.disabled
-                                            a Next
+    .panel.panel-default.fic-panel
+        .panel-body
+            .row
+                .col-lg-12
+                    h1.page-header Courses
+            .row
+                .col-lg-12
+                    .panel
+                        .panel-body
+                            .dataTables_wrapper.form-inline.dt-bootstrap.no-footer
+                                .row
+                                    .col-sm-6.show-values
+                                        .dataTables_length
+                                            label(for="number-entries") Mostrar
+                                            select#number-entries.form-control.input-sm()
+                                                option(value="10") 10
+                                                option(value="25") 25
+                                                option(value="50") 50
+                                                option(value="100") 100
+                                            | entradas
+                                    .col-sm-6.search-filter
+                                        .dataTables_filter
+                                            label(for="search") Buscar:
+                                            input#search.form-control.input-sm(type="search")
+                                .row
+                                    .col-sm-12
+                                        table.table.table-striped.table-bordered.table-hover.dataTable.no-footer.dtr-inline
+                                            thead
+                                                tr(role="row")
+                                                    th.sorting_asc Título
+                                                    th.sorting Slug
+                                                    th.sorting Subtítulo
+                                                    th.sorting Objetivo
+                                                    th.sorting Precio
+                                                    th
+                                            tbody
+                                                tr.odd
+                                                    td Máster en Visualización interactiva de arquitectura con Unreal Engine
+                                                    td master-en-visualizacion-interactiva-de-arquitectura-con-unreal-engine
+                                                    td Visualización 3D en tiempo real, realidad virtual, interacción con espacios 3D, infoarquitectura
+                                                    td En el mundo de la visualización de arquitectura que siempre tratamos de lograr un resultado cercano a la realidad para ofrecer a nuestros clientes la sensación de ver el proyecto terminado.
+                                                    td 1995€
+                                                    td
+                                                        a.edit-link(href="./course.html")
+                                                            span.glyphicon.glyphicon-edit
+                                                        a.remove-link
+                                                            span.glyphicon.glyphicon-bin
+                                                        a.view-ling(href="./view-course.html")
+                                                            span.glyphicon.glyphicon-eye-open
+                                                tr.even
+                                                    td Curso de Diseño de interfaz en proyectos Web, Apps y Smart TV
+                                                    td curso-de-diseno-de-interfaz-en-proyectos-web-apps-y-smart-tv
+                                                    td Diseño interactivo, diseño visual y funcional, diseño centrado en el usuario, responsive, usabilidad
+                                                    td En el Curso de Diseño de interfaz para proyectos Web, Apps y Smart TV aprenderás cómo diseñar el sistema visual y funcional de interacción entre sitios web, aplicaciones para smartphones, tablets y smart TV y sus usuarios en base a las necesidades y objetivos específicos de cada proyecto.
+                                                    td 990€
+                                                    td
+                                                        a.edit-link(href="./course.html")
+                                                            span.glyphicon.glyphicon-edit
+                                                        a.remove-link
+                                                            span.glyphicon.glyphicon-bin
+                                                        a.view-ling(href="./view-course.html")
+                                                            span.glyphicon.glyphicon-eye-open
+                                .row
+                                    .col-sm-6.show-values
+                                        .dataTables_info Mostrando 1 de 10 de 15 entradas
+                                    .col-sm-6.pagination-numbers
+                                        .dataTables_paginate.paging_simple_numbers
+                                            ul.pagination
+                                                li.paginate_button.previous.disabled
+                                                    a Anterior
+                                                li.paginate_button.disabled
+                                                    a 1
+                                                li.paginate_button.disabled
+                                                    a 2
+                                                li.paginate_button.disabled
+                                                    a 3
+                                                li.paginate_button.disabled
+                                                    a 4
+                                                li.paginate_button.disabled
+                                                    a Siguiente

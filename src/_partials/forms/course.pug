@@ -1,33 +1,30 @@
 .form-wrapper
-    .row
-        .col-lg-12
-            h1.page-header Edit course
-    .row
-        .col-lg-12
-            .panel.panel-default
-                .panel-heading Form Elements
-                .panel-body
-                    .row
-                        .col-lg-12
-                            form(role="form")
-                                .form-group.col-lg-4.col-md-6.col-xs-12
-                                    label Title
-                                    input.form-control
-                                .form-group.col-lg-4.col-md-6.col-xs-12
-                                    label Slug
-                                    input.form-control
-                                .form-group.col-lg-4.col-md-6.col-xs-12
-                                    label Subtitle
-                                    input.form-control
-                                .form-group.col-lg-4.col-md-6.col-xs-12
-                                    label Targets
-                                    input.form-control
-                                .form-group.col-lg-4.col-md-6.col-xs-12
-                                    label Price
-                                    input.form-control(type="number")
-                                .form-group.col-lg-4.col-md-6.col-xs-12
-                                    label Image
-                                    input.form-control(type="file")
-            .panel.panel-default
-                .panel-heading Form Relations
-                .panel-body
+    .panel.panel-default.fic-panel
+        .panel-body
+            .row
+                .col-lg-12
+                    h1.page-header Editar curso
+            .row
+                .col-lg-12
+                    .panel
+                        .row
+                            .col-lg-12
+                                form(role="form")
+                                    .form-group.col-xs-12.fic-form-group
+                                        label Título
+                                        input.form-control
+                                    .form-group.col-xs-12.fic-form-group
+                                        label Slug
+                                        input.form-control
+                                    .form-group.col-xs-12.fic-form-group
+                                        label Subtítulo
+                                        input.form-control
+                                    .form-group.col-xs-12.fic-form-group
+                                        label Objetivos
+                                        input.form-control
+                                    .form-group.col-xs-12.fic-form-group
+                                        label Precio
+                                        input.form-control(type="number")
+                                    .form-group.col-xs-12.fic-form-group
+                                        label Imagen
+                                        input.form-control(type="file")
