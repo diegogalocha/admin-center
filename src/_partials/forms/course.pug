@@ -11,20 +11,60 @@
                             .col-lg-12
                                 form(role="form")
                                     .form-group.col-xs-12.fic-form-group
-                                        label Título
-                                        input.form-control
+                                        label(for="titulo") Título
+                                        input#titulo.form-control(placeholder="Título")
                                     .form-group.col-xs-12.fic-form-group
-                                        label Slug
-                                        input.form-control
+                                        label(for="slug") Slug
+                                        input#slug.form-control(placeholder="Slug", disabled)
+                                    .form-group.col-xs-12.fic-form-group.has-error
+                                        label(for="subtitulo") Subtítulo
+                                        input#subtitulo.form-control
                                     .form-group.col-xs-12.fic-form-group
-                                        label Subtítulo
-                                        input.form-control
+                                        label(for="objetivos") Objetivos
+                                        textarea#objetivos.form-control(rows="3")
+                                    .form-group
+                                        label Colores
+                                        .checkbox
+                                            label
+                                                input(type="checkbox", value="rojo")
+                                                | Rojo
+                                        .checkbox
+                                            label
+                                                input(type="checkbox", value="amarillo")
+                                                | Amarillo
+                                        .checkbox
+                                            label
+                                                input(type="checkbox", value="verde")
+                                                | Verde
+                                    .form-group
+                                        label Años
+                                        .radio
+                                            label
+                                                input(type="radio", value="1")
+                                                | 1
+                                        .radio
+                                            label
+                                                input(type="radio", value="2")
+                                                | 2
+                                        .radio
+                                            label
+                                                input(type="radio", value="3")
+                                                | 3
                                     .form-group.col-xs-12.fic-form-group
-                                        label Objetivos
-                                        input.form-control
+                                        label(for="imagen") Imagen
+                                        input#imagen(type="file")
                                     .form-group.col-xs-12.fic-form-group
-                                        label Precio
-                                        input.form-control(type="number")
+                                        label Profesores
+                                        select.form-control
+                                            option Juan
+                                            option José
+                                            option Julio
                                     .form-group.col-xs-12.fic-form-group
-                                        label Imagen
-                                        input.form-control(type="file")
+                                        label Profesores
+                                        select.form-control(multiple)
+                                            option Pedro
+                                            option Paco
+                                            option Patricio
+                                            option Peluca
+                                            option Patachula
+                                    // Espacio para selector de intercambio
