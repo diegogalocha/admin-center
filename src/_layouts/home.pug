@@ -13,5 +13,17 @@ html
             include ../_partials/main-content/sidebar-left
             block content
 
-        //- script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+        script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+        script(type="text/javascript", src="js/multiselect.min.js")
+        script.
+            jQuery(document).ready(function($) {
+                console.log('Hey');
+                $('.fic-multiselect-from').multiselect({
+                    right: '#fic-multiselect-to',
+                    rightAll: '#fic-right-all',
+                    rightSelected: '#fic-right-selected',
+                    leftSelected: '#fic-left-selected',
+                    leftAll: '#fic-left-all'
+                });
+            });
         block body_end
