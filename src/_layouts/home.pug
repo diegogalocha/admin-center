@@ -14,9 +14,12 @@ html
             block content
 
         script(type="text/javascript", src="js/jQuery.min.js")
+        script(type="text/javascript", src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
         script(type="text/javascript", src="js/multiselect.min.js")
         script(type="text/javascript", src="js/jquery.nestable.js")
         script(type="text/javascript", src="js/dropzone.js")
+        // script(type="text/javascript", src="js/bootstrap3-wysihtml5.js")
+        script(type="text/javascript", src="js/bootstrap3-wysihtml5.all.js")
         script.
             $('.dd').nestable({});
             console.log($('.dd').nestable('serialize'));
@@ -29,5 +32,16 @@ html
                     leftSelected: '#fic-left-selected',
                     leftAll: '#fic-left-all'
                 });
+            });
+        script.
+            $('#fic-textarea').wysihtml5({
+                "font-styles": true,
+                "emphasis": true,
+                "lists": true,
+                "html": false,
+                "link": false,
+                "image": true,
+                "color": true,
+                "blockquote": true
             });
         block body_end

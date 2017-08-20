@@ -20,8 +20,8 @@
                                         label(for="subtitulo") Subtítulo
                                         input#subtitulo.form-control
                                     .form-group.col-xs-12.fic-form-group
-                                        label(for="objetivos") Objetivos
-                                        textarea#objetivos.form-control(rows="3")
+                                        label(for="fic-textarea") Objetivos
+                                        textarea#fic-textarea(placeholder="Enter text", style="width: 700px;")
                                     .form-group
                                         label Colores
                                         .checkbox
@@ -114,6 +114,7 @@
                                                                 .dd-handle Foreach
                         .row
                             .col-lg-12
+                                label(for="file") Imagen
                                 form.dropzone(action="/file-upload")
                                     .fallback
-                                        input(type="file", name="file", multiple)
+                                        input#file(type="file", name="file", multiple)
