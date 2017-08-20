@@ -15,9 +15,13 @@ html
 
         script(type="text/javascript", src="js/jQuery.min.js")
         script(type="text/javascript", src="js/multiselect.min.js")
+        script(type="text/javascript", src="js/jquery.nestable.js")
+        script(type="text/javascript", src="js/dropzone.js")
+        script.
+            $('.dd').nestable({});
+            console.log($('.dd').nestable('serialize'));
         script.
             jQuery(document).ready(function($) {
-                console.log('Hey');
                 $('.fic-multiselect-from').multiselect({
                     right: '#fic-multiselect-to',
                     rightAll: '#fic-right-all',
