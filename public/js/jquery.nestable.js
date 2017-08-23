@@ -43,6 +43,7 @@
         emptyClass: 'dd-empty',
         expandBtnHTML: '<button class="dd-expand" data-action="expand" type="button">Expand</button>',
         collapseBtnHTML: '<button class="dd-collapse" data-action="collapse" type="button">Collapse</button>',
+        removeRowButton: '<a title="Remove Row" class="removeButton pull-right" data-action="removeRow">X</a>',
         group: 0,
         maxDepth: 5,
         threshold: 20,
@@ -73,10 +74,12 @@
                 return ' ' + key + '="' + value + '"';
             }).join(' ');
 
+
             var html = '<' + options.itemNodeName + item_attrs_string + '>';
             html += '<' + options.handleNodeName + ' class="' + options.handleClass + '">';
             html += '<' + options.contentNodeName + ' class="' + options.contentClass + '">';
             html += content;
+            html += '<a onclick="removeNestable(' + item.id + ')">X</a>'
             html += '</' + options.contentNodeName + '>';
             html += '</' + options.handleNodeName + '>';
             html += children;
@@ -151,6 +154,10 @@
                 }
                 if (action === 'expand') {
                     list.expandItem(item);
+                }
+                if (action === 'removeRow') {
+                    item.remove();
+                    list.el.trigger('change');
                 }
             });
 
