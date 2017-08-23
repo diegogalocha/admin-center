@@ -86,35 +86,16 @@
                                     .form-group.col-xs-12.fic-form-group.buttons-group
                                         button.btn.btn-primary(type="submit") Guardar
                                         button.btn.btn-default(type="reset") Limpiar
-                                .nestable-edition
-                                    .dd
-                                        ol.dd-list
-                                            li.dd-item(data-id="1")
-                                                .dd-handle Introducción
-                                            li.dd-item(data-id="2")
-                                                .dd-handle Tema 1
-                                                ol.dd-list
-                                                    li.dd-item(data-id="3")
-                                                        .dd-handle Principios básicos
-                                                    li.dd-item(data-id="4")
-                                                        .dd-handle Programación en C
-                                                    li.dd-item(data-id="5")
-                                                        .dd-handle Programación en Java
-                                                        ol.dd-list
-                                                            li.dd-item(data-id="6")
-                                                                .dd-handle Bucles
-                                                                ol.dd-list
-                                                                    li.dd-item(data-id="7")
-                                                                        .dd-handle Normal
-                                                                    li.dd-item(data-id="8")
-                                                                        .dd-handle Extendido
-                                                            li.dd-item(data-id="9")
-                                                                .dd-handle While
-                                                            li.dd-item(data-id="10")
-                                                                .dd-handle Foreach
                         .row
                             .col-lg-12
                                 label(for="file") Imagen
                                 form.dropzone(action="/file-upload")
                                     .fallback
                                         input#file(type="file", name="file", multiple)
+                        .row.nestable-row
+                            .col-xs-12
+                                input#textNestable.col-xs-1(type="text")
+                                button#appendNestable.btn.btn-primary.col-xs-1() Añadir campo
+                            .nestable-edition.col-xs-12
+                                #fic-nestable.dd
+                            input#temary(type="hidden")

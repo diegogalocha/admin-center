@@ -21,8 +21,78 @@ html
         // script(type="text/javascript", src="js/bootstrap3-wysihtml5.js")
         script(type="text/javascript", src="js/bootstrap3-wysihtml5.all.js")
         script.
-            $('.dd').nestable({});
-            console.log($('.dd').nestable('serialize'));
+            $(document).ready(function() {
+                var json = [
+                    {
+                        "id": 1,
+                        "content": "Introducción",
+                        "value": "Introducción"
+                    },
+                    {
+                        "id": 2,
+                        "content": "Tema 1",
+                        "value": "Tema 1",
+                        "children": [
+                            {
+                                "id": 3,
+                                "content": "Principios básicos",
+                                "value": "Principios básicos"
+                            },
+                            {
+                                "id": 4,
+                                "content": "Programación en C",
+                                "value": "Programación en C"
+                            },
+                            {
+                                "id": 5,
+                                "content": "Programación en Java",
+                                "value": "Programación en Java",
+                                "foo": "Bar",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "content": "Bucles",
+                                        "value": "Bucles"
+                                    },
+                                    {
+                                        "id": 7,
+                                        "content": "Normal",
+                                        "value": "Normal"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ];
+                var lastId = 7;
+
+                var updateOutput = function(e) {
+                    if(window.JSON) {
+                        $('#temary').val(window.JSON.stringify($('#fic-nestable').nestable('serialize')));
+                    } else {
+                        output.val('JSON browser support required for this demo.');
+                    }
+                };
+
+                $('#fic-nestable').nestable({
+                    group: 1,
+                    json: json,
+                    contentCallback: function(item) {
+                        var content = item.content || '' ? item.content : item.id;
+                        return content;
+                    }
+                }).on('change', updateOutput);
+
+                $('#appendNestable').on('click', function(e) {
+                    var newItem = {
+                        "id": ++lastId,
+                        "content": $('#textNestable').val(),
+                        "value": $('#textNestable').val()
+                    };
+                    $('#fic-nestable').nestable('add', newItem);
+                    updateOutput();
+                });
+            });
         script.
             jQuery(document).ready(function($) {
                 $('.fic-multiselect-from').multiselect({
