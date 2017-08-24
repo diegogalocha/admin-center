@@ -79,10 +79,10 @@
             html += '<' + options.handleNodeName + ' class="' + options.handleClass + '">';
             html += '<' + options.contentNodeName + ' class="' + options.contentClass + '">';
             html += content;
-            html += '<a onclick="removeNestable(' + item.id + ')">X</a>'
             html += '</' + options.contentNodeName + '>';
             html += '</' + options.handleNodeName + '>';
             html += children;
+            html += '<a onclick="removeNestable(' + item.id + ')" class="remove-nestable">X</a>'
             html += '</' + options.itemNodeName + '>';
 
             return html;
