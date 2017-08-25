@@ -21,6 +21,13 @@ html
         // script(type="text/javascript", src="js/bootstrap3-wysihtml5.js")
         script(type="text/javascript", src="js/bootstrap3-wysihtml5.all.js")
         script.
+            var openModalToRemove;
+            $(document).ready(function() {
+                openModalToRemove = function() {
+                    $('#remove-element-dialog').addClass('display-inherit');
+                }
+            });
+        script.
             var removeNestable;
             $(document).ready(function() {
                 var json = [
@@ -86,6 +93,7 @@ html
                         "value": $('#textNestable').val()
                     };
                     $('#fic-nestable').nestable('add', newItem);
+                    $('#textNestable').val('');
                     updateOutput();
                 });
             });

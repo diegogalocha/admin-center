@@ -1,3 +1,14 @@
+#remove-element-dialog.modal-dialog
+    .modal-content
+        .modal-header
+            a.close(data-dismiss="modal")
+            h3 Borrar elemento
+        .modal-body
+            h5 ¿Estás seguro que deseas borrar el elemento?
+        .modal-footer.btn-group
+            a.btn.btn-primary(data-dismiss="modal") Eliminar
+            a.btn.btn-default(data-dismiss="modal") Cancelar
+
 .form-wrapper
     .panel.panel-default.fic-panel
         .panel-body
@@ -46,7 +57,7 @@
                                                     td.icons-container
                                                         a.edit-link(href="./course.html")
                                                             span.glyphicon.glyphicon-edit
-                                                        a.remove-link
+                                                        a.remove-link(onclick="openModalToRemove()")
                                                             span.glyphicon.glyphicon-trash
                                                         a.view-link(href="./view-course.html")
                                                             span.glyphicon.glyphicon-eye-open
@@ -59,7 +70,7 @@
                                                     td.icons-container
                                                         a.edit-link(href="./course.html")
                                                             span.glyphicon.glyphicon-edit
-                                                        a.remove-link
+                                                        a.remove-link(onclick="openModalToRemove()")
                                                             span.glyphicon.glyphicon-trash
                                                         a.view-link(href="./view-course.html")
                                                             span.glyphicon.glyphicon-eye-open
